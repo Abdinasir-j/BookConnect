@@ -1,0 +1,5 @@
+.agent-auth-wrapper { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: var(--hero-bg); }
+.agent-auth-card { width: 380px; padding: 40px 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.agent-container { display: flex; min-height: 100vh; background: var(--bg-color); }
+.agent-sidebar { width: 250px; background: #1e3a8a; color: #fff; padding: 20px; display: flex; flex-direction: column; }
+.agent-content { flex: 1; padding: 30px 40px; overflow-y: auto; }

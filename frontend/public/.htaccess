@@ -1,0 +1,13 @@
+# BookConnect on XAMPP Apache (folder: htdocs/bookconnect)
+# Needs these modules enabled in xampp/apache/conf/httpd.conf:
+#   rewrite_module, proxy_module, proxy_http_module
+RewriteEngine On
+RewriteBase /bookconnect/
+
+# 1) /bookconnect/api/...  ->  Node.js backend on port 3000
+RewriteRule ^api/(.*)$ http://127.0.0.1:3000/api/$1 [P,L]
+
+# 2) React Router: any other URL that is not a real file -> index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
